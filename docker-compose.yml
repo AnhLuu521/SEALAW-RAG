@@ -1,0 +1,16 @@
+# Bây giờ: chỉ chạy Qdrant     ->  docker compose up -d qdrant
+# Bước 7 : thêm service "app" (Streamlit, cổng 8501) phụ thuộc qdrant
+
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: rag-qdrant
+    restart: unless-stopped
+    ports:
+      - "6333:6333"   # REST API + dashboard: http://localhost:6333/dashboard
+      - "6334:6334"   # gRPC
+    volumes:
+      - qdrant_data:/qdrant/storage   # dữ liệu không mất khi tắt/xoá container
+
+volumes:
+  qdrant_data:

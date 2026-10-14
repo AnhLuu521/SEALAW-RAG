@@ -1,0 +1,10 @@
+# Secrets - KHONG BAO GIO commit
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Du lieu Qdrant chay local
+qdrant_storage/

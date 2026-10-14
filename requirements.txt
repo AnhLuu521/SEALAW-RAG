@@ -1,0 +1,7 @@
+python-dotenv
+openai
+qdrant-client
+pypdf
+python-docx
+# Thêm dần khi cần:
+# streamlit
